@@ -1953,137 +1953,46 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       peliculas: []
     };
   },
-  created: function created() {
-    var _this = this;
-
-    axios.get('/funcion').then(function (res) {
-      // console.log(res.data);
-      _this.peliculas = res.data;
-    });
+  mounted: function mounted() {
     var slides = document.querySelectorAll('.slides');
     console.log(slides);
+  },
+  created: function created() {
+    this.cargar();
+  },
+  methods: {
+    cargar: function cargar() {
+      var _this = this;
+
+      var lista = '';
+      var vista = '';
+      axios.get('/funcion').then(function (res) {
+        console.log(res.data);
+        _this.peliculas = res.data;
+
+        _this.peliculas.forEach(function (row, index) {
+          lista += '<div class="slides">';
+          lista += '<img src="img/' + row.idPelicula + '.jpg" alt="">';
+          lista += '<div class="content">';
+          lista += '<h2>' + row.nombre + '</h2>';
+          lista += '<p>Lorem quia vero.</p>';
+          lista += '<a href="">';
+          lista += '<i class="fa fa-play"></i>FUNCIONES</a></div></div>';
+          vista += '<div class="column"><img src="img/' + row.idPelicula + '.jpg" alt=""></div>';
+        });
+
+        console.log(lista);
+        console.log(vista);
+        $('#lista1').html(lista);
+        $('#vista').html(vista);
+      });
+    }
   }
 });
 
@@ -19796,215 +19705,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("section", [
         _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "slides" }, [
-            _c("img", { attrs: { src: "img/img1.jpg", alt: "" } }),
-            _vm._v(" "),
-            _c("div", { staticClass: "content" }, [
-              _c("h2", [_vm._v("Film Title 01")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero."
-                )
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "" } }, [
-                _c("i", { staticClass: "fa fa-play" }),
-                _vm._v(
-                  "\n                        Watch Free\n                    "
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "slides" }, [
-            _c("img", { attrs: { src: "img/img2.jpg", alt: "" } }),
-            _vm._v(" "),
-            _c("div", { staticClass: "content" }, [
-              _c("h2", [_vm._v("Film Title 02")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero."
-                )
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "" } }, [
-                _c("i", { staticClass: "fa fa-play" }),
-                _vm._v(
-                  "\n                        Watch Free\n                    "
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "slides" }, [
-            _c("img", { attrs: { src: "img/img3.jpg", alt: "" } }),
-            _vm._v(" "),
-            _c("div", { staticClass: "content" }, [
-              _c("h2", [_vm._v("Film Title 03")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero."
-                )
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "" } }, [
-                _c("i", { staticClass: "fa fa-play" }),
-                _vm._v(
-                  "\n                        Watch Free\n                    "
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "slides" }, [
-            _c("img", { attrs: { src: "img/img4.jpg", alt: "" } }),
-            _vm._v(" "),
-            _c("div", { staticClass: "content" }, [
-              _c("h2", [_vm._v("Film Title 04")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero."
-                )
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "" } }, [
-                _c("i", { staticClass: "fa fa-play" }),
-                _vm._v(
-                  "\n                        Watch Free\n                    "
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "slides" }, [
-            _c("img", { attrs: { src: "img/img5.jpg", alt: "" } }),
-            _vm._v(" "),
-            _c("div", { staticClass: "content" }, [
-              _c("h2", [_vm._v("Film Title 05")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero."
-                )
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "" } }, [
-                _c("i", { staticClass: "fa fa-play" }),
-                _vm._v(
-                  "\n                        Watch Free\n                    "
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "slides" }, [
-            _c("img", { attrs: { src: "img/img6.jpg", alt: "" } }),
-            _vm._v(" "),
-            _c("div", { staticClass: "content" }, [
-              _c("h2", [_vm._v("Film Title 06")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero."
-                )
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "" } }, [
-                _c("i", { staticClass: "fa fa-play" }),
-                _vm._v(
-                  "\n                        Watch Free\n                    "
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "slides" }, [
-            _c("img", { attrs: { src: "img/img7.jpg", alt: "" } }),
-            _vm._v(" "),
-            _c("div", { staticClass: "content" }, [
-              _c("h2", [_vm._v("Film Title 07")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero."
-                )
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "" } }, [
-                _c("i", { staticClass: "fa fa-play" }),
-                _vm._v(
-                  "\n                        Watch Free\n                    "
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "slides" }, [
-            _c("img", { attrs: { src: "img/img8.jpg", alt: "" } }),
-            _vm._v(" "),
-            _c("div", { staticClass: "content" }, [
-              _c("h2", [_vm._v("Film Title 08")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero."
-                )
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "" } }, [
-                _c("i", { staticClass: "fa fa-play" }),
-                _vm._v(
-                  "\n                        Watch Free\n                    "
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "slides" }, [
-            _c("img", { attrs: { src: "img/img9.jpg", alt: "" } }),
-            _vm._v(" "),
-            _c("div", { staticClass: "content" }, [
-              _c("h2", [_vm._v("Film Title 09")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero."
-                )
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "" } }, [
-                _c("i", { staticClass: "fa fa-play" }),
-                _vm._v(
-                  "\n                        Watch Free\n                    "
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "slides" }, [
-            _c("img", { attrs: { src: "img/img10.jpg", alt: "" } }),
-            _vm._v(" "),
-            _c("div", { staticClass: "content" }, [
-              _c("h2", [_vm._v("Film Title 10")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero."
-                )
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "" } }, [
-                _c("i", { staticClass: "fa fa-play" }),
-                _vm._v(
-                  "\n                        Watch Free\n                    "
-                )
-              ])
-            ])
-          ])
+          _c("div", { attrs: { id: "lista1", name: "lista1" } })
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "row" }, [
@@ -20012,45 +19713,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("div", { staticClass: "nav" }, [
             _c("div", { staticClass: "nav-bar" }, [
-              _c("div", { staticClass: "column active" }, [
-                _c("img", { attrs: { src: "img/img1.jpg", alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "column" }, [
-                _c("img", { attrs: { src: "img/img2.jpg", alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "column" }, [
-                _c("img", { attrs: { src: "img/img3.jpg", alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "column" }, [
-                _c("img", { attrs: { src: "img/img4.jpg", alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "column" }, [
-                _c("img", { attrs: { src: "img/img5.jpg", alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "column" }, [
-                _c("img", { attrs: { src: "img/img6.jpg", alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "column" }, [
-                _c("img", { attrs: { src: "img/img7.jpg", alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "column" }, [
-                _c("img", { attrs: { src: "img/img8.jpg", alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "column" }, [
-                _c("img", { attrs: { src: "img/img9.jpg", alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "column" }, [
-                _c("img", { attrs: { src: "img/img10.jpg", alt: "" } })
-              ])
+              _c("div", { attrs: { id: "vista", name: "vista" } })
             ])
           ]),
           _vm._v(" "),
@@ -32385,8 +32048,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laravel\cine\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\laravel\cine\resources\css\app.css */"./resources/css/app.css");
+__webpack_require__(/*! C:\xampp2\htdocs\cine\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp2\htdocs\cine\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ })

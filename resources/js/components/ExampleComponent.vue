@@ -25,131 +25,15 @@
         </header>
         <section>
             <div class="container" >
-                <div class="slides">
-                    <img src="img/img1.jpg" alt="">
-                    <div class="content">
-                        <h2>Film Title 01</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero.</p>
-                        <a href="">
-                            <i class="fa fa-play"></i>
-                            Watch Free
-                        </a>
-                    </div>
-                </div>
-                <div class="slides">
-                    <img src="img/img2.jpg" alt="">
-                    <div class="content">
-                        <h2>Film Title 02</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero.</p>
-                        <a href="">
-                            <i class="fa fa-play"></i>
-                            Watch Free
-                        </a>
-                    </div>
-                </div>
-                <div class="slides">
-                    <img src="img/img3.jpg" alt="">
-                    <div class="content">
-                        <h2>Film Title 03</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero.</p>
-                        <a href="">
-                            <i class="fa fa-play"></i>
-                            Watch Free
-                        </a>
-                    </div>
-                </div>
-                <div class="slides">
-                    <img src="img/img4.jpg" alt="">
-                    <div class="content">
-                        <h2>Film Title 04</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero.</p>
-                        <a href="">
-                            <i class="fa fa-play"></i>
-                            Watch Free
-                        </a>
-                    </div>
-                </div>
-                <div class="slides">
-                    <img src="img/img5.jpg" alt="">
-                    <div class="content">
-                        <h2>Film Title 05</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero.</p>
-                        <a href="">
-                            <i class="fa fa-play"></i>
-                            Watch Free
-                        </a>
-                    </div>
-                </div>
-                <div class="slides">
-                    <img src="img/img6.jpg" alt="">
-                    <div class="content">
-                        <h2>Film Title 06</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero.</p>
-                        <a href="">
-                            <i class="fa fa-play"></i>
-                            Watch Free
-                        </a>
-                    </div>
-                </div>
-                <div class="slides">
-                    <img src="img/img7.jpg" alt="">
-                    <div class="content">
-                        <h2>Film Title 07</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero.</p>
-                        <a href="">
-                            <i class="fa fa-play"></i>
-                            Watch Free
-                        </a>
-                    </div>
-                </div>
-                <div class="slides">
-                    <img src="img/img8.jpg" alt="">
-                    <div class="content">
-                        <h2>Film Title 08</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero.</p>
-                        <a href="">
-                            <i class="fa fa-play"></i>
-                            Watch Free
-                        </a>
-                    </div>
-                </div>
-                <div class="slides">
-                    <img src="img/img9.jpg" alt="">
-                    <div class="content">
-                        <h2>Film Title 09</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero.</p>
-                        <a href="">
-                            <i class="fa fa-play"></i>
-                            Watch Free
-                        </a>
-                    </div>
-                </div>
-                <div class="slides">
-                    <img src="img/img10.jpg" alt="">
-                    <div class="content">
-                        <h2>Film Title 10</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores et ex hic illo laboriosam omnis, repudiandae similique sint sit ullam voluptatibus. Adipisci consequatur, magnam officia officiis perferendis quia vero.</p>
-                        <a href="">
-                            <i class="fa fa-play"></i>
-                            Watch Free
-                        </a>
-                    </div>
+                <div id='lista1' name='lista1'>
                 </div>
             </div>
             <div class="row">
                 <h2>Recommend</h2>
                 <div class="nav">
                     <div class="nav-bar">
-                        <div class="column active"><img src="img/img1.jpg" alt=""></div>
-                        <div class="column"><img src="img/img2.jpg" alt=""></div>
-                        <div class="column"><img src="img/img3.jpg" alt=""></div>
-                        <div class="column"><img src="img/img4.jpg" alt=""></div>
-                        <div class="column"><img src="img/img5.jpg" alt=""></div>
-                        <div class="column"><img src="img/img6.jpg" alt=""></div>
-                        <div class="column"><img src="img/img7.jpg" alt=""></div>
-                        <div class="column"><img src="img/img8.jpg" alt=""></div>
-                        <div class="column"><img src="img/img9.jpg" alt=""></div>
-                        <div class="column"><img src="img/img10.jpg" alt=""></div>
+                        <div id='vista' name='vista'>
+                        </div>
                     </div>
                 </div>
                 <div class="prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
@@ -167,13 +51,44 @@ export default {
             peliculas:[],
         }
     },
-    created() {
-        axios.get('/funcion').then(res=>{
-            // console.log(res.data);
-            this.peliculas=res.data;
-        });
-        const slides=document.querySelectorAll('.slides');
+    mounted(){
+         const slides=document.querySelectorAll('.slides');
         console.log(slides);
+    },
+    created(){
+        this.cargar();
+       
+    },
+    methods: {
+        cargar(){
+            var lista='';
+            var vista='';
+        axios.get('/funcion').then(res=>{
+             console.log(res.data);
+            this.peliculas=res.data;
+
+            this.peliculas.forEach(function(row,index){
+                lista+='<div class="slides">';
+                    lista+='<img src="img/'+row.idPelicula+'.jpg" alt="">';
+                    lista+='<div class="content">';
+                        lista+='<h2>'+row.nombre+'</h2>';
+                        lista+='<p>Lorem quia vero.</p>';
+                        lista+='<a href="">';
+                        lista+='<i class="fa fa-play"></i>FUNCIONES</a></div></div>';
+            
+            vista+='<div class="column"><img src="img/'+row.idPelicula+'.jpg" alt=""></div>';
+                
+            
+                
+            });
+            console.log(lista);
+            console.log(vista);
+            $('#lista1').html(lista);
+            $('#vista').html(vista);
+
+        });
+
+    }
     }
 }
 

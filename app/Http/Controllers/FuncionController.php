@@ -23,9 +23,9 @@ class FuncionController extends Controller
 //            ->get();
         return DB::table('funcion')
             ->select('pelicula.idPelicula','pelicula.nombre','pelicula.imagen')
-            ->join('pelicula', 'pelicula.Idpelicula', '=', 'funcion.idPelicula')
+            ->join('pelicula', 'pelicula.idpelicula', '=', 'funcion.idPelicula')
             ->groupBy('idPelicula','pelicula.nombre','pelicula.imagen')
-            ->whereDate('fecha','=',now())
+            ->whereDate('fecha','>=',now())
             ->get();
     }
 
