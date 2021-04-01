@@ -1959,12 +1959,11 @@ __webpack_require__.r(__webpack_exports__);
       peliculas: []
     };
   },
-  mounted: function mounted() {
-    var slides = document.querySelectorAll('.slides');
-    console.log(slides);
-  },
+  mounted: function mounted() {},
   created: function created() {
     this.cargar();
+    var slides = document.querySelectorAll('.slides');
+    console.log(slides);
   },
   methods: {
     cargar: function cargar() {
@@ -1972,19 +1971,21 @@ __webpack_require__.r(__webpack_exports__);
 
       var lista = '';
       var vista = '';
+      var i = 1;
       axios.get('/funcion').then(function (res) {
         console.log(res.data);
         _this.peliculas = res.data;
 
         _this.peliculas.forEach(function (row, index) {
-          lista += '<div class="slides">';
+          i++;
+          if (i == 1) lista += '<div class="slides" >';else lista += '<div class="slides" >';
           lista += '<img src="img/' + row.idPelicula + '.jpg" alt="">';
           lista += '<div class="content">';
           lista += '<h2>' + row.nombre + '</h2>';
           lista += '<p>Lorem quia vero.</p>';
           lista += '<a href="">';
           lista += '<i class="fa fa-play"></i>FUNCIONES</a></div></div>';
-          vista += '<div class="column"><img src="img/' + row.idPelicula + '.jpg" alt=""></div>';
+          if (i == 1) vista += '<div class="column active"><img src="img/' + row.idPelicula + '.jpg" alt=""></div>';else vista += '<div class="column"><img src="img/' + row.idPelicula + '.jpg" alt=""></div>';
         });
 
         console.log(lista);

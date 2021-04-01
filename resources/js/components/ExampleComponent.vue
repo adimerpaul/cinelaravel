@@ -52,30 +52,38 @@ export default {
         }
     },
     mounted(){
-         const slides=document.querySelectorAll('.slides');
-        console.log(slides);
+
     },
     created(){
         this.cargar();
-       
+
+        const slides=document.querySelectorAll('.slides');
+        console.log(slides);
     },
     methods: {
         cargar(){
             var lista='';
             var vista='';
+            var i=1;
         axios.get('/funcion').then(res=>{
              console.log(res.data);
             this.peliculas=res.data;
 
             this.peliculas.forEach(function(row,index){
-                lista+='<div class="slides">';
+                  i++; 
+            if(i==1)
+                lista+='<div class="slides" >';
+            else
+                lista+='<div class="slides" >';
                     lista+='<img src="img/'+row.idPelicula+'.jpg" alt="">';
                     lista+='<div class="content">';
                         lista+='<h2>'+row.nombre+'</h2>';
                         lista+='<p>Lorem quia vero.</p>';
                         lista+='<a href="">';
                         lista+='<i class="fa fa-play"></i>FUNCIONES</a></div></div>';
-            
+            if(i==1)
+            vista+='<div class="column active"><img src="img/'+row.idPelicula+'.jpg" alt=""></div>';
+            else
             vista+='<div class="column"><img src="img/'+row.idPelicula+'.jpg" alt=""></div>';
                 
             
