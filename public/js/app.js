@@ -1971,14 +1971,14 @@ __webpack_require__.r(__webpack_exports__);
 
       var lista = '';
       var vista = '';
-      var i = 1;
+      var i = 0;
       axios.get('/funcion').then(function (res) {
         console.log(res.data);
         _this.peliculas = res.data;
 
         _this.peliculas.forEach(function (row, index) {
           i++;
-          if (i == 1) lista += '<div class="slides" >';else lista += '<div class="slides" >';
+          if (i == 1) lista += '<div class="slides" >';else lista += '<div class="slides" style="display:none">';
           lista += '<img src="img/' + row.idPelicula + '.jpg" alt="">';
           lista += '<div class="content">';
           lista += '<h2>' + row.nombre + '</h2>';

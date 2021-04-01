@@ -64,7 +64,7 @@ export default {
         cargar(){
             var lista='';
             var vista='';
-            var i=1;
+            var i=0;
         axios.get('/funcion').then(res=>{
              console.log(res.data);
             this.peliculas=res.data;
@@ -74,7 +74,7 @@ export default {
             if(i==1)
                 lista+='<div class="slides" >';
             else
-                lista+='<div class="slides" >';
+                lista+='<div class="slides" style="display:none">';
                     lista+='<img src="img/'+row.idPelicula+'.jpg" alt="">';
                     lista+='<div class="content">';
                         lista+='<h2>'+row.nombre+'</h2>';
